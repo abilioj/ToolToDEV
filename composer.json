@@ -1,0 +1,27 @@
+{
+    "name": "abilioj/tool-to-dev",
+    "description": "A simple PHP library to provide various utility classes for development",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "abilioj",
+            "email": "abilioj@live.com",
+            "homepage": "https://github.com/abilioj",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "abilioj\\ToolToDev\\config\\": "src/config/",
+            "abilioj\\ToolToDev\\connection\\": "src/connection/",
+            "abilioj\\ToolToDev\\models\\": "src/models/",
+            "abilioj\\ToolToDev\\util\\": "src/util/"
+        }
+    },
+    "keywords": ["tool", "dev", "development", "utility", "classes"],
+    "homepage": "https://github.com/abilioj/ToolToDev"
+}
