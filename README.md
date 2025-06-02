@@ -35,6 +35,7 @@ composer  require abilioj/tool-to-dev
 
 ### env conexão
 ```env
+    ENV=1
     # Configurações de banco de dados
     DB_DRIVERS=mysql
     DB_HOST=localhost
