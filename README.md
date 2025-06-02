@@ -31,28 +31,30 @@ composer  require abilioj/tool-to-dev
 
 ## ENV Exemplos
 
+
+
 ### env conexão
 ```env
-# Configurações de banco de dados
-DB_DRIVERS=mysql
-DB_HOST=localhost
-DB_PREFIXOBD=
-DB_PORT=3306
-DB_DATABASE=
-DB_USER=
-DB_PASSWORD=
+    # Configurações de banco de dados
+    DB_DRIVERS=mysql
+    DB_HOST=localhost
+    DB_PREFIXOBD=
+    DB_PORT=3306
+    DB_DATABASE=
+    DB_USER=
+    DB_PASSWORD=
 ```
 
 ### env ldap
 ```env
-# Configurações de AD      
-AD_HOST = 
-AD_DNSNAME = 
-AD_GROUP_AD = ''
-AD_port = 389
-AD_USER = 
-AD_PWD = 
-AD_FILTER = ''
+    # Configurações de AD      
+    AD_HOST = 
+    AD_DNSNAME = 
+    AD_GROUP_AD = ''
+    AD_port = 389
+    AD_USER = 
+    AD_PWD = 
+    AD_FILTER = ''
 ```
 
 ## Uso
@@ -61,14 +63,25 @@ Após instalar a biblioteca, você pode começar a usá-la da seguinte forma:
 
 ### exemplo da classe ToString
 ```php
-require 'vendor/autoload.php';
+    require 'vendor/autoload.php';
 
-use AbilioJ\ToolToDev\ToString;
- 
-echo ToString::StringPraMaiusculas('hello world');
+    use abilioj\ToolToDev\util\ToString;
+    
+    echo ToString::StringPraMaiusculas('hello world');
 ```
 
+### exemplo de uso das conexão
 
+No seu projeto criar um pagote de conexao e cria um class que estende a class de escolha 'ConnMysql,ConnPostgres ou ConnPDO'
+```php
+    require 'vendor/autoload.php';
+
+    use abilioj\ToolToDev\connection\ConnPDO;
+
+    class connection extends ConnPDO
+    {
+    }
+```
 
 ## Contribuição
 

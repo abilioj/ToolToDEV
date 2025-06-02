@@ -2,7 +2,7 @@
 
 namespace abilioj\ToolToDev\connection;
 
-use abilioj\ToolToDev\config\ConfigBDClass;
+use abilioj\ToolToDev\config\ConfigBD;
 use abilioj\ToolToDev\util\ToString;
 use PDO;
 use PDOException;
@@ -49,7 +49,7 @@ class ConnPDO {
         $this->autocommit = false;
         $this->db_row_autocommit = null;
         $this->lastInsertId = 0;
-        $configBD = new ConfigBDClass();
+        $configBD = new ConfigBD();
         $this->drivers = $configBD->getDrivers();
         $this->database = $configBD->getDatabase();
         $this->user = $configBD->getUser();
