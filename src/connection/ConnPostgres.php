@@ -2,7 +2,7 @@
 
 namespace abilioj\ToolToDev\connection;
  
-use abilioj\ToolToDev\config\ConfigBDClass;
+use abilioj\ToolToDev\config\ConfigBD;
 
 use Exception; 
 
@@ -31,7 +31,7 @@ class ConnPostgres
 
     function __construct()
     {
-        $configBD = new ConfigBDClass();
+        $configBD = new ConfigBD();
         $this->database = $configBD->getDatabase();
         $this->user = $configBD->getUser();
         $this->host = $configBD->getHost();

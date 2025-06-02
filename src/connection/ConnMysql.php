@@ -2,7 +2,7 @@
 
 namespace abilioj\ToolToDev\connection;
  
-use abilioj\ToolToDev\config\ConfigBDClass;
+use abilioj\ToolToDev\config\ConfigBD;
 use mysqli;
 use mysqli_sql_exception;
 use Exception;
@@ -43,7 +43,7 @@ class ConnMysql {
         $this->numrows = 0;
         $this->autocommit = false;
         $this->db_row_autocommit = null;
-        $configBD = new ConfigBDClass();
+        $configBD = new ConfigBD();
         $this->database = $configBD->getDatabase();
         $this->user = $configBD->getUser();
         $this->host = $configBD->getHost();
