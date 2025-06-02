@@ -83,7 +83,7 @@ No seu projeto criar um pagote de conexao e cria um class que estende a class de
     }
 ```
 
-### exemplo de sql 
+### exemplo de uso da class sql 
 
 Mais exemplo em [exemplo-sql]https://github.com/abilioj/ToolToDEV/blob/main/example/exemplo-sql.php 
 
