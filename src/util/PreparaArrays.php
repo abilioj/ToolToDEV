@@ -15,21 +15,9 @@ class PreparaArrays {
    }
 
    public function ArryasTOMaiusculas($array) {
-      if (function_exists("TOMaiusculas")) :
-
-         function TOMaiusculasI($value) {
-            return ToString::StringPraMaiusculas($value);
-         }
-
-         $return = array_map("TOMaiusculasI", $array);
-      else:
-
-         function TOMaiusculas($value) {
-            return ToString::StringPraMaiusculas($value);
-         }
-
-         $return = array_map("TOMaiusculas", $array);
-      endif;
+      $return = array_map(function($value) {
+         return ToString::StringPraMaiusculas($value);
+      }, $array);
       return $return;
    }
 

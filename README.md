@@ -83,6 +83,37 @@ No seu projeto criar um pagote de conexao e cria um class que estende a class de
     }
 ```
 
+### exemplo de sql 
+
+Mais exemplo em [exemplo-sql]https://github.com/abilioj/ToolToDEV/blob/main/example/exemplo-sql.php 
+
+```php
+    require 'vendor/autoload.php';
+
+    use abilioj\ToolToDev\util\Sql
+
+    // Exemplo de uso da classe Sql para gerar uma consulta SQL com JOIN
+    $camposTabelas = array("u.nome_usuario", "s.tipo_status", "n.tipo_nivel", "u.data_cadastro_usuario", "u.id_usuario");
+    $nomeTabelas = array("u" => "usuario");
+    $condicoes = array("u.id_usuario=1");
+    $conditionsLeftJoin = array("left join status_usuario s on s.id_status=u.id_status", "left join nivel_usuario n on n.id_nivel=u.id_nivel");
+
+    $sql = new Sql('');
+    $sql->arrayTable = $nomeTabelas;
+    $sql->camposTabelas = $camposTabelas;
+    $sql->ArryasTOMaiusculas = false;
+    $sql->conditionsLeftJoin = $conditionsLeftJoin;
+    $sql->condicoesTabela = $condicoes;
+    $sql->colunaOrdenada = null;
+    $sql->ordenacao = null;
+    $sql->limit = null;
+    $sql->TOP = null;
+
+    echo $sql->sqlPesquisar();
+    //resultado: SELECT u.nome_usuario, s.tipo_status, n.tipo_nivel, u.data_cadastro_usuario, u.id_usuario FROM usuario u left join status_usuario s on s.id_status=u.id_status left join nivel_usuario n on n.id_nivel=u.id_nivel WHERE u.id_usuario=1;
+
+```
+
 ## Contribuição
 
 Contribuições são bem-vindas! Siga as etapas abaixo para contribuir:

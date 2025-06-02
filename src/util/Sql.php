@@ -2,6 +2,8 @@
 
 namespace abilioj\ToolToDev\util;
 
+use abilioj\ToolToDev\util\PreparaArrays;
+
 /**
  * Description of SQL
  *
@@ -46,7 +48,7 @@ class Sql {
 
     private function ArryasSQLTOMaiusculas() {
         $PArrays = new PreparaArrays();
-        $qdd = count($this->tabela);
+        $qdd = is_array($this->tabela) ? count($this->tabela) : 1;
         if ($qdd > 1):
             if (isset($this->tabela) || $this->tabela != null):
                 $arraytabela = $PArrays->ArryasTOMaiusculas($this->tabela);
