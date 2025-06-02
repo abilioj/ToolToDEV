@@ -272,6 +272,7 @@ class Sql {
                 else:
                     $this->instrucaoSql .= $condicoes . " ";
                 endif;
+                $interacoesCampos++;
             }
         else:
             $this->instrucaoSql .= " ";

@@ -75,3 +75,14 @@ $sql->dados = $dados;
 
 echo $sql->sqlAtualizar($where);
 //resultado: UPDATE usuario SET nome_usuario='Abilio junior', id_status=1, id_nivel=2 WHERE id_usuario=1;
+
+echo "<br/><br/>";
+
+// Exemplo de uso da classe Sql para gerar uma exclusão SQL
+
+$condicoes = array("id_usuario>1" , "id_status=1");
+$sql = new Sql('usuario');
+$sql->condicoesTabela = $condicoes;
+
+echo $sql->sqlexcluir($condicoes);
+//resultado: DELETE FROM usuario WHERE id_usuario=1 AND id_status=1;

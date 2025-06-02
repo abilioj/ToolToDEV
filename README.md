@@ -1,6 +1,6 @@
 # Tool To DEV
 
-Uma biblioteca PHP simples para fornecer várias classes de utilitários para desenvolvimento.
+Uma biblioteca PHP simples para fornecer várias classes de utilitários para desenvolvimento de projeto do zero.
 
 A ideia é criar uma biblioteca com classes que sejam úteis em diferentes contextos de desenvolvimento, como por exemplo, classe para manipular strings, classe para manipular arrays, classe para manipular datas, etc...
 
@@ -85,7 +85,7 @@ No seu projeto criar um pagote de conexao e cria um class que estende a class de
 
 ### exemplo de uso da class sql 
 
-Mais exemplo em [exemplo-sql]https://github.com/abilioj/ToolToDEV/blob/main/example/exemplo-sql.php 
+Mais exemplo em [exemplo-sql](https://github.com/abilioj/ToolToDEV/blob/main/example/exemplo-sql.php)
 
 ```php
     require 'vendor/autoload.php';
